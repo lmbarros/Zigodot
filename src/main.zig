@@ -11,7 +11,7 @@ test "basic add functionality" {
     try testing.expect(add(3, 7) == 10);
 }
 
-export fn the_test_init_function(p_interface: *const gd.GDNativeInterface, p_library: gd.GDNativeExtensionClassLibraryPtr, r_initialization: *gd.GDNativeInitialization) gd.GDNativeBool {
+export fn the_test_init_function(p_interface: *const gd.GDNativeInterface, p_library: gd.GDNativeExtensionClassLibraryPtr, r_initialization: *gd.GDNativeInitialization) callconv(.C) gd.GDNativeBool {
     _ = p_library;
     _ = r_initialization;
 
