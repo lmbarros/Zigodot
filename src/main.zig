@@ -2,15 +2,6 @@ const std = @import("std");
 const testing = std.testing;
 const gd = @cImport(@cInclude("godot/gdnative_interface.h"));
 
-export fn add(a: i32, b: i32) i32 {
-    std.debug.print("{}", .{gd});
-    return a + b;
-}
-
-test "basic add functionality" {
-    try testing.expect(add(3, 7) == 10);
-}
-
 export fn the_test_init_function(p_interface: *const gd.GDNativeInterface, p_library: gd.GDNativeExtensionClassLibraryPtr, r_initialization: *gd.GDNativeInitialization) callconv(.C) gd.GDNativeBool {
     _ = p_library;
     _ = r_initialization;
