@@ -23,7 +23,7 @@ export fn the_test_init_function(p_interface: *const gd.GDNativeInterface, p_lib
     std.debug.print("Looks like we running Godot {}.{}.{}, AKA '{s}'.\n",
         .{ p_interface.version_major, p_interface.version_minor, p_interface.version_patch, p_interface.version_string });
 
-    r_initialization.minimum_initialization_level = gd.GDNATIVE_INITIALIZATION_SCENE; // Doesn't seem to have any effect...
+    r_initialization.minimum_initialization_level = gd.GDNATIVE_INITIALIZATION_SCENE;
     r_initialization.initialize = inits_init;
     r_initialization.deinitialize = inits_deinit;
 
